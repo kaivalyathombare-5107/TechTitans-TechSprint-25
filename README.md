@@ -1,92 +1,85 @@
 # TechTitans-TechSprint-25
 A 3D Digital Twin Simulator for Contract Farming using Unity & Google Gemini. Built for Tech Sprint AI Hack '25.
 
-AgriTwin: Digital Twin for Contract Farming 🚜
+AgriTwin: AI Contract Guardian for Farmers 🛡️
 Tech Sprint AI Hack '25 Submission
 
-Tagline: "Don't sign blindly. Simulate first."
+Tagline: "Visualizing the fine print. See the risk before you sign."
 
 1. The Problem
-Farmers in India (specifically Nashik) sign complex contract farming agreements without understanding the risks.
+Legal Complexity: Indian farmers cannot read complex English contracts or identify hidden "predatory clauses" (e.g., no payment during hail/pest attacks).
 
-They cannot predict how Weather + Soil + Contract Terms interact to determine final profit.
-
-Result: Exploitation and financial loss.
+Lack of Context: A text warning isn't enough. Farmers need to see the potential consequences of a bad contract to understand the gravity of the risk.
 
 2. The Solution
-AgriTwin is a 3D Simulator (Digital Twin) that visualizes the financial outcome of a contract before a seed is planted.
+AgriTwin is an AI-powered software dashboard that combines Legal Analysis with 3D Visualization.
 
-Input: Farmer builds their land in 3D and uploads a contract PDF.
+The Brain (Gemini AI): The user uploads a contract photo or pastes text. The AI scans for unfair terms, missing clauses, and hidden risks.
 
-Processing: Google Gemini analyzes the contract terms vs. local risk data (Weather/Soil).
+The Eyes (Unity 3D): Instead of just showing text, the software uses a 3D engine to visualize the consequence.
 
-Output: The 3D farm changes visually (healthy crops vs. withered crops) to show profit or loss.
+Example: If the contract has no "Drought Protection" clause, the 3D farm on the dashboard visually dries up and withers.
 
-3. Tech Stack
-Frontend (Visuals): Unity Engine (C#)
+3. Tech Stack & Roles
+Frontend (Unity): Handles the Chat Interface (UI) and Risk Visualization (3D Particle Systems).
 
-Backend (Brain): Python (Flask)
+Backend (Python/Flask): Handles the API connection and logic.
 
-AI Model: Google Gemini 1.5 Pro (via Google AI Studio)
+AI Model: Google Gemini 1.5 Pro (via Google AI Studio) for legal text analysis.
 
-Communication: JSON over HTTP (REST API)
+4. How It Works (The Flow)
+Input: User uploads a contract PDF or asks a question in the Unity Chat UI.
 
-4. Project Architecture (How it connects)
-Unity: Collects Crop, Acres, Price, Soil_Type.
+Processing: Python sends the text to Google Gemini with a specific prompt: "Find faults in this contract regarding payment security and weather risk."
 
-Unity: Sends data as JSON to http://127.0.0.1:5000/analyze.
+Tagging: Gemini returns a text summary and a Visual Tag (e.g., TAG_DROUGHT, TAG_PEST, TAG_SAFE).
 
-Python: Receives data + Prompts Gemini: "Calculate risk for [Crop] in [Nashik] at [Price]..."
+Visualization: Unity receives the tag and triggers the corresponding 3D animation (e.g., The "Pest" tag triggers a particle system of bugs eating the crop).
 
-Gemini: Returns Risk_Level (High/Low) and Estimated_Profit.
+5. Development Roadmap
+Phase 1: The Interface (Days 1-4)
+[ ] Unity UI: Build a split-screen layout (Left: Chat Window, Right: 3D Viewport).
 
-Unity: Visualizes the result (Green Particles = Profit, Dead Crops = Loss).
+[ ] Unity 3D: Create 3 distinct "State Prefabs":
 
-5. Development Roadmap (Checklist)
-Phase 1: The Foundation (Days 1-3)
-[ ] Repo Setup: Create Unity-Frontend and Python-Backend folders.
+Healthy Farm (Standard state).
 
-[ ] Unity: Create a 10x10 Grid System (Teammate).
+Dead Farm (For drought/risk warnings).
 
-[ ] Python: Create a basic app.py Flask server that returns "Hello World".
+Pest Infested (For lack of pesticide support).
 
-[ ] Connection Test: Send a dummy JSON from Unity to Python and print it.
+[ ] Python: Setup basic Flask server.
 
-Phase 2: The Logic (Days 4-10)
-[ ] Python: Integrate google-generativeai library.
+Phase 2: The Intelligence (Days 5-10)
+[ ] Python: Connect to Google Gemini API.
 
-[ ] Python: Write the prompt engineering for Contract Analysis.
+[ ] Prompt Engineering: Create the "Legal Expert" persona that outputs strictly formatted JSON (Text + Visual Tag).
 
-[ ] Unity: Build the UI (Input fields for Price, Acres).
+[ ] Integration: Connect Unity Chat input to Python backend.
 
-[ ] Unity: Add Visuals (Cube changes color: Green=Healthy, Brown=Dead).
+Phase 3: The Demo (Days 11-15)
+[ ] Test Case: Feed a specific "Bad Contract" and ensure the 3D farm reacts correctly.
 
-Phase 3: The Polish (Days 11-14)
-[ ] Integration: Connect real Gemini output to Unity visuals.
-
-[ ] Data: Add specific "Nashik" contexts (Onion, Tomato data).
-
-[ ] Pitch: Record the demo video.
+[ ] Polish: Add "Warning" UI popups in Unity.
 
 6. How to Run Locally
 Backend (Python)
 Bash
 
 cd Python-Backend
-pip install flask google-generativeai pandas
-export GEMINI_API_KEY="your_key_here"
-python main.py
-# Server runs on http://127.0.0.1:5000
+pip install flask google-generativeai
+# Set your GEMINI_API_KEY environment variable
+python app.py
 Frontend (Unity)
-Open Unity-Frontend folder in Unity Hub (2022 LTS+).
+Open Unity-Frontend folder in Unity Hub.
 
-Open Scene: Scenes/MainFarm.
+Open Scene: Scenes/DashboardMain.
 
-Press Play.
+Press Play to see the Chat UI and 3D Viewport.
 
-7. Developer Rules (Read this!)
-Git Ignore: NEVER push the Library or Temp folders from Unity.
+7. Key Features (For Judges)
+Visual Legal Aid: Bridges the literacy gap by showing risks visually.
 
-API Keys: NEVER push your Google API Key to GitHub. Use environment variables.
+Real-time Analysis: Uses Gemini 1.5 Pro for instant feedback.
 
-Commits: Write clear messages (e.g., "Added Grid Script", not "update").
+Interactive 3D: Uses Unity's Particle Systems to simulate weather and crop outcomes based on contract data.
