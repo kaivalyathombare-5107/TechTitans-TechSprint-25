@@ -7,8 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Allows Unity to talk to this server
 
-# TODO: PASTE YOUR GOOGLE AI STUDIO KEY HERE
-# Get it from: https://aistudio.google.com/
+
 os.environ["GEMINI_API_KEY"] = AIzaSyCeKvxsYnhUQ86fP_wG0V0Q9kaY1ppHaLk
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
