@@ -96,14 +96,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 3. API SETUP ---
-# Try to get the key from Streamlit Secrets (Cloud)
-# If not found (Local run), look for it in environment variables or ask user to set it.
 try:
     os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 except:
-    # Fallback for local testing if secrets.toml is missing
-    # You can keep your key here temporarily for LOCAL testing, 
-    # BUT DELETE IT before pushing to GitHub.
     pass 
 
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
@@ -247,5 +242,6 @@ if analyze_btn:
 
         except Exception as e:
             st.error(f"Analysis Failed: {e}")
+
 
 
