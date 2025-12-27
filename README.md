@@ -47,7 +47,7 @@ Built on **Streamlit**, the application is lightweight, mobile-responsive, and w
 
 | High Risk Alert 🚨 | Safe Contract ✅ |
 |:---:|:---:|
-| *(Place screenshot of Red Dashboard here)* | *(Place screenshot of Green Dashboard here)* |
+| *Screenshot 2025-12-27 125536.jpg* | *Screenshot 2025-12-27 125747.jpg* |
 | *Detects "Force Majeure" traps instantly.* | *Validates fair price and insurance.* |
 
 ---
