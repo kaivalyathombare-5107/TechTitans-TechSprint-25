@@ -76,7 +76,7 @@ Phase 3: OCR Integration (Scan physical paper contracts via camera).
 Phase 4: Blockchain Ledger (Store "Safe" contracts immutably).
 
 👨‍💻 Team TechTitan
-**Developers**: 
+Developers: 
       1. Kaivalya Thombare-Python Developer & AI Integration
       2. Riya Patrao-Frontend Designer
 
