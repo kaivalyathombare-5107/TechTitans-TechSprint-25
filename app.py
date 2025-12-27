@@ -96,7 +96,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 3. API SETUP ---
-os.environ["GEMINI_API_KEY"] = "AIzaSyCeKvxsYnhUQ86fP_wG0V0Q9kaY1ppHaLk"
+os.environ["GEMINI_API_KEY"] = "Google API key here"
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 model = genai.GenerativeModel('gemini-2.5-flash')
 
@@ -238,3 +238,4 @@ if analyze_btn:
 
         except Exception as e:
             st.error(f"Analysis Failed: {e}")
+
