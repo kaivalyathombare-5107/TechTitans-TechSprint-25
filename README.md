@@ -1,85 +1,83 @@
-# TechTitans-TechSprint-25
-A 3D Digital Twin Simulator for Contract Farming using Unity & Google Gemini. Built for Tech Sprint AI Hack '25.
+# 🚜 Agroww | Intelligent Contract Audit System
 
-AgriTwin: AI Contract Guardian for Farmers 🛡️
-Tech Sprint AI Hack '25 Submission
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Framework](https://img.shields.io/badge/Frontend-Streamlit-red)
+![AI](https://img.shields.io/badge/AI-Google_Gemini_Pro-green)
+![Status](https://img.shields.io/badge/Status-Prototype_Live-orange)
 
-Tagline: "Visualizing the fine print. See the risk before you sign."
+> **"Stop signing blind. Start farming smart."**
+> Agroww is an AI-powered "Legal Iron Dome" for farmers, converting complex contract legalese into a simple Safety Score.
 
-1. The Problem
-Legal Complexity: Indian farmers cannot read complex English contracts or identify hidden "predatory clauses" (e.g., no payment during hail/pest attacks).
+---
 
-Lack of Context: A text warning isn't enough. Farmers need to see the potential consequences of a bad contract to understand the gravity of the risk.
+## 🚨 The Problem
+Indian farmers often sign contract farming agreements they cannot read or understand.
+* **Hidden Clauses:** "Force Majeure" traps that refuse payment during rain.
+* **Zero Liability:** Buyers often shift 100% of pest/crop failure risk to the farmer.
+* **Language Barrier:** Contracts are in complex English; farmers speak local dialects.
 
-2. The Solution
-AgriTwin is an AI-powered software dashboard that combines Legal Analysis with 3D Visualization.
+## 💡 The Solution: Agroww Enterprise
+Agroww is a **Corporate-Grade Audit Dashboard** that acts as a farmer's personal legal team. Instead of confusing text, we provide:
+1.  **Safety Score (0-100):** A single metric to decide if a contract is safe.
+2.  **Risk Badges:** 🚨 **CRITICAL** vs ✅ **SAFE** visual indicators.
+3.  **Plain English Breakdown:** Explains *why* a clause is dangerous in 2 sentences.
 
-The Brain (Gemini AI): The user uploads a contract photo or pastes text. The AI scans for unfair terms, missing clauses, and hidden risks.
+---
 
-The Eyes (Unity 3D): Instead of just showing text, the software uses a 3D engine to visualize the consequence.
+## 🌟 Key Features (Hackathon Edition)
 
-Example: If the contract has no "Drought Protection" clause, the 3D farm on the dashboard visually dries up and withers.
+### 1. AI "Lawyer-in-a-Box"
+Powered by **Google Gemini 1.5**, Agroww parses PDF/Text contracts instantly to detect:
+* Price manipulation traps.
+* One-sided rejection clauses.
+* Lack of insurance coverage.
 
-3. Tech Stack & Roles
-Frontend (Unity): Handles the Chat Interface (UI) and Risk Visualization (3D Particle Systems).
+### 2. The "Sahyadri" Dashboard UI
+Designed for trust and clarity.
+* **Glassmorphism Design:** Modern, high-trust interface.
+* **Visual Risk Meters:** Animations that highlight danger areas instantly.
+* **Financial Impact Cards:** Shows potential monetary loss (e.g., "₹45,000 Risk").
 
-Backend (Python/Flask): Handles the API connection and logic.
+### 3. Latency-Free Analysis
+Built on **Streamlit**, the application is lightweight, mobile-responsive, and works on low-bandwidth village networks.
 
-AI Model: Google Gemini 1.5 Pro (via Google AI Studio) for legal text analysis.
+---
 
-4. How It Works (The Flow)
-Input: User uploads a contract PDF or asks a question in the Unity Chat UI.
+## 📸 Screenshots
 
-Processing: Python sends the text to Google Gemini with a specific prompt: "Find faults in this contract regarding payment security and weather risk."
+| High Risk Alert 🚨 | Safe Contract ✅ |
+|:---:|:---:|
+| *(Place screenshot of Red Dashboard here)* | *(Place screenshot of Green Dashboard here)* |
+| *Detects "Force Majeure" traps instantly.* | *Validates fair price and insurance.* |
 
-Tagging: Gemini returns a text summary and a Visual Tag (e.g., TAG_DROUGHT, TAG_PEST, TAG_SAFE).
+---
 
-Visualization: Unity receives the tag and triggers the corresponding 3D animation (e.g., The "Pest" tag triggers a particle system of bugs eating the crop).
+## 🛠️ Tech Stack
 
-5. Development Roadmap
-Phase 1: The Interface (Days 1-4)
-[ ] Unity UI: Build a split-screen layout (Left: Chat Window, Right: 3D Viewport).
+* **Frontend:** Streamlit (Python) - *Chosen for rapid deployment and data visualization.*
+* **Backend Intelligence:** Google Gemini API (1.5 Flash).
+* **Styling:** Custom CSS3 with Keyframe Animations & Glassmorphism.
+* **Deployment:** Localhost / Streamlit Cloud.
 
-[ ] Unity 3D: Create 3 distinct "State Prefabs":
+---
 
-Healthy Farm (Standard state).
+## 🚀 How to Run (Judge's Guide)
 
-Dead Farm (For drought/risk warnings).
+**Step 1: Clone the Repo**
+```bash
+git clone [https://github.com/kaivalyathombare-5107/Agroww.git](https://github.com/kaivalyathombare-5107/Agroww.git)
+cd Agroww
 
-Pest Infested (For lack of pesticide support).
+****🔮 Future Roadmap****
+Phase 2: Multilingual Voice Support (Speak to the contract).
 
-[ ] Python: Setup basic Flask server.
+Phase 3: OCR Integration (Scan physical paper contracts via camera).
 
-Phase 2: The Intelligence (Days 5-10)
-[ ] Python: Connect to Google Gemini API.
+Phase 4: Blockchain Ledger (Store "Safe" contracts immutably).
 
-[ ] Prompt Engineering: Create the "Legal Expert" persona that outputs strictly formatted JSON (Text + Visual Tag).
+****👨‍💻 Team TechTitan****
+**Developers**: 
+      1. Kaivalya Thombare-Python Developer & AI Integration
+      2. Riya Patrao-Frontend Designer
 
-[ ] Integration: Connect Unity Chat input to Python backend.
-
-Phase 3: The Demo (Days 11-15)
-[ ] Test Case: Feed a specific "Bad Contract" and ensure the 3D farm reacts correctly.
-
-[ ] Polish: Add "Warning" UI popups in Unity.
-
-6. How to Run Locally
-Backend (Python)
-Bash
-
-cd Python-Backend
-pip install flask google-generativeai
-# Set your GEMINI_API_KEY environment variable
-python app.py
-Frontend (Unity)
-Open Unity-Frontend folder in Unity Hub.
-
-Open Scene: Scenes/DashboardMain.
-
-Press Play to see the Chat UI and 3D Viewport.
-
-7. Key Features (For Judges)
-Visual Legal Aid: Bridges the literacy gap by showing risks visually.
-
-Real-time Analysis: Uses Gemini 1.5 Pro for instant feedback.
-
-Interactive 3D: Uses Unity's Particle Systems to simulate weather and crop outcomes based on contract data.
+Pivot Note: Originally designed as a 3D simulation, we pivoted to a high-utility Web Dashboard to prioritize accessibility and clarity for the end-user (farmers).
