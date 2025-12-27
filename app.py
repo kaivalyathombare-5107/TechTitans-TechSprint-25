@@ -126,15 +126,15 @@ with col_head2:
         </div>
     """, unsafe_allow_html=True)
 
-# --- 6. INPUT SECTION ---
-st.markdown('<div class="audit-card">', unsafe_allow_html=True)
+# --- 6. INPUT SECTION (Transparent / No White Card) ---
 c1, c2 = st.columns([2, 1])
+
 with c1:
     st.subheader("📄 Contract Input")
     upload_type = st.radio("Input Source:", ["📂 Load Sample PDF", "📝 Manual Entry"], horizontal=True)
     
     if upload_type == "📝 Manual Entry":
-        user_text = st.text_area("Paste Clause:", height=150)
+        user_text = st.text_area("Paste Clause:", height=150, placeholder="Paste contract text here...")
     else:
         st.info("ℹ️ Demo Mode: Pre-loading 'Trap' Contract...")
         user_text = """
@@ -142,13 +142,16 @@ with c1:
         to cancel this entire agreement without penalty. The Farmer bears 100% of the cost for any crop spoilage.
         SECTION 6: PAYMENT. Payment will be processed 60 days after quality check.
         """
-with c2:
-    st.write("")
-    st.write("")
-    st.write("")
-    analyze_btn = st.button("🚀 INITIATE SCAN", use_container_width=True)
-st.markdown('</div>', unsafe_allow_html=True)
 
+with c2:
+    # Spacer to push the button down slightly to align with text box
+    st.write("") 
+    st.write("") 
+    st.write("") 
+    
+    # The Button stays Big and Green
+    analyze_btn = st.button("🚀 INITIATE SCAN", use_container_width=True)
+    
 # --- 7. ANALYSIS LOGIC ---
 if analyze_btn:
     if not user_text:
@@ -242,6 +245,7 @@ if analyze_btn:
 
         except Exception as e:
             st.error(f"Analysis Failed: {e}")
+
 
 
 
