@@ -55,7 +55,7 @@ Built on **Streamlit**, the application is lightweight, mobile-responsive, and w
 ## 🛠️ Tech Stack
 
 * **Frontend:** Streamlit (Python) - *Chosen for rapid deployment and data visualization.*
-* **Backend Intelligence:** Google Gemini API (1.5 Flash).
+* **Backend Intelligence:** Google Gemini API (2.5 Flash).
 * **Styling:** Custom CSS3 with Keyframe Animations & Glassmorphism.
 * **Deployment:** Localhost / Streamlit Cloud.
 
