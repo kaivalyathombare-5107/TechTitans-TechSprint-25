@@ -68,14 +68,14 @@ Built on **Streamlit**, the application is lightweight, mobile-responsive, and w
 git clone [https://github.com/kaivalyathombare-5107/Agroww.git](https://github.com/kaivalyathombare-5107/Agroww.git)
 cd Agroww
 
-****🔮 Future Roadmap****
+🔮 Future Roadmap
 Phase 2: Multilingual Voice Support (Speak to the contract).
 
 Phase 3: OCR Integration (Scan physical paper contracts via camera).
 
 Phase 4: Blockchain Ledger (Store "Safe" contracts immutably).
 
-****👨‍💻 Team TechTitan****
+👨‍💻 Team TechTitan
 **Developers**: 
       1. Kaivalya Thombare-Python Developer & AI Integration
       2. Riya Patrao-Frontend Designer
