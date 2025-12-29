@@ -27,7 +27,7 @@ Agroww is a **Corporate-Grade Audit Dashboard** that acts as a farmer's personal
 ## 🌟 Key Features (Hackathon Edition)
 
 ### 1. AI "Lawyer-in-a-Box"
-Powered by **Google Gemini 1.5**, Agroww parses PDF/Text contracts instantly to detect:
+Powered by **Google Gemini 2.5**, Agroww parses PDF/Text contracts instantly to detect:
 * Price manipulation traps.
 * One-sided rejection clauses.
 * Lack of insurance coverage.
