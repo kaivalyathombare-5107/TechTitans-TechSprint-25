@@ -32,7 +32,7 @@ Powered by **Google Gemini 2.5**, Agroww parses PDF/Text contracts instantly to 
 * One-sided rejection clauses.
 * Lack of insurance coverage.
 
-### 2. The "Sahyadri" Dashboard UI
+### 2. The "Agroww" Dashboard UI
 Designed for trust and clarity.
 * **Glassmorphism Design:** Modern, high-trust interface.
 * **Visual Risk Meters:** Animations that highlight danger areas instantly.
