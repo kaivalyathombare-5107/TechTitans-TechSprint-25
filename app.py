@@ -230,7 +230,7 @@ if analyze_btn:
                     if clean:
                         st.markdown(f"""
                         <div style="padding: 10px; border-bottom: 1px solid #eee;">
-                            <span style="color: #c62828; font-weight: bold;">⚠️ FLAGGED:</span> {clean}
+                            <span style="'#c62828' if score < 50 else '#2e7d32'; font-weight: bold;">Highlighed:</span> {clean}
                         </div>
                         """, unsafe_allow_html=True)
                 st.markdown('</div>', unsafe_allow_html=True)
